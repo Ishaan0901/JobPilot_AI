@@ -3,4 +3,5 @@ __pycache__/
 *.pyc
 .venv/
 venv/
-MyEnv/
+MyEnv/uploaded_resume.pdf
+uploaded_resume.pdf
