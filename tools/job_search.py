@@ -30,4 +30,9 @@ def job_search(job_role, location):
             "error": f"Adzuna API returned status {response.status_code}"
         }
 
-    return response.json()
+    data = response.json()
+
+    for job in data.get("results", []):
+        job["job_url"] = f"https://www.adzuna.in/details/{job['id']}"
+
+    return data
